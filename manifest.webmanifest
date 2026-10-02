@@ -1,0 +1,14 @@
+{
+  "name": "Reisebegleiter",
+  "short_name": "Reisebegleiter",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf6ee",
+  "theme_color": "#7a1320",
+  "lang": "de",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

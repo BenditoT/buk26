@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#7a1320">
+  <title>Reisebegleiter</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
+  <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  <div id="toasts" class="toast-container" role="region" aria-live="polite"></div>
+  <div id="updateBanner" class="update" hidden>
+    <p>Eine neue Version ist bereit.</p>
+    <button type="button" id="updateGo">Aktualisieren</button>
+  </div>
+  <section id="gate">
+    <p class="kicker">Reisebegleiter</p>
+    <h1>Zugang</h1>
+    <p class="lead">Passphrase eingeben. Sie bleibt auf diesem Gerät, bis du ihn sperrst.</p>
+    <form id="gateForm">
+      <label class="sr" for="pwInput">Passphrase</label>
+      <input id="pwInput" name="pw" type="password" autocomplete="current-password" enterkeyhint="go">
+      <button type="submit" id="pwGo">Öffnen</button>
+      <p id="pwError" role="alert"></p>
+    </form>
+  </section>
+  <div id="app" hidden>
+    <header>
+      <p id="kicker" class="kicker"></p>
+      <h1 id="title">Reisebegleiter</h1>
+      <p id="subtitle"></p>
+    </header>
+    <main id="view"></main>
+    <div id="sheet" hidden></div>
+    <nav class="dock" aria-label="Bereiche">
+      <button type="button" data-go="heute">Heute</button>
+      <button type="button" data-go="plan">Plan</button>
+      <button type="button" data-go="karte">Karte</button>
+      <button type="button" data-go="musik">Musik</button>
+      <button type="button" data-go="mehr">Mehr</button>
+    </nav>
+  </div>
+  <script src="./vendor/leaflet/leaflet.js"></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
